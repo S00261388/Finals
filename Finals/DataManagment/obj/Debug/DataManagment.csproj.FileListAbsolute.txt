@@ -1,0 +1,15 @@
+C:\Users\AdamBokobza-STUDENT\source\repos\Finals\DataManagment\bin\Debug\DataManagment.exe.config
+C:\Users\AdamBokobza-STUDENT\source\repos\Finals\DataManagment\bin\Debug\DataManagment.exe
+C:\Users\AdamBokobza-STUDENT\source\repos\Finals\DataManagment\bin\Debug\DataManagment.pdb
+C:\Users\AdamBokobza-STUDENT\source\repos\Finals\DataManagment\bin\Debug\EntityFramework.dll
+C:\Users\AdamBokobza-STUDENT\source\repos\Finals\DataManagment\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\AdamBokobza-STUDENT\source\repos\Finals\DataManagment\bin\Debug\Finals.exe
+C:\Users\AdamBokobza-STUDENT\source\repos\Finals\DataManagment\bin\Debug\Finals.pdb
+C:\Users\AdamBokobza-STUDENT\source\repos\Finals\DataManagment\bin\Debug\Finals.exe.config
+C:\Users\AdamBokobza-STUDENT\source\repos\Finals\DataManagment\bin\Debug\EntityFramework.xml
+C:\Users\AdamBokobza-STUDENT\source\repos\Finals\DataManagment\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\AdamBokobza-STUDENT\source\repos\Finals\DataManagment\obj\Debug\DataManagment.csproj.AssemblyReference.cache
+C:\Users\AdamBokobza-STUDENT\source\repos\Finals\DataManagment\obj\Debug\DataManagment.csproj.CoreCompileInputs.cache
+C:\Users\AdamBokobza-STUDENT\source\repos\Finals\DataManagment\obj\Debug\DataMana.44C132A5.Up2Date
+C:\Users\AdamBokobza-STUDENT\source\repos\Finals\DataManagment\obj\Debug\DataManagment.exe
+C:\Users\AdamBokobza-STUDENT\source\repos\Finals\DataManagment\obj\Debug\DataManagment.pdb
