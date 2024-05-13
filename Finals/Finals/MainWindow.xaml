@@ -7,19 +7,20 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-        <Label Content="Booking Details" HorizontalAlignment="Left" Margin="35,44,0,0" VerticalAlignment="Top" Height="33" Width="146"/>
-        <DatePicker x:Name="datePicker" SelectedDateChanged="DatePicker_SelectedDateChanged" HorizontalAlignment="Left" Margin="196,49,0,0" VerticalAlignment="Top"/>
-        <Button Content="Delete Booking" HorizontalAlignment="Left" Margin="355,380,0,0" VerticalAlignment="Top"/>
-        <Label Content="New Booking" HorizontalAlignment="Left" Margin="615,61,0,0" VerticalAlignment="Top"/>
-        <DatePicker HorizontalAlignment="Left" Margin="615,131,0,0" VerticalAlignment="Top"/>
-        <ListBox x:Name="bookingsListBox" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="10,95,350,125"/>
-        <TextBlock x:Name="capacityTextBlock" HorizontalAlignment="Left" Margin="10,390,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="82"><Run Language="en-ie" /></TextBlock>
-        <TextBlock x:Name="bookingsTextBlock" HorizontalAlignment="Left" Margin="108,390,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="69"><Run Language="en-ie" Text="Bookings"/></TextBlock>
-        <TextBlock x:Name="availableTextBlock" HorizontalAlignment="Left" Margin="225,390,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="73"><Run Language="en-ie" Text="Available  "/></TextBlock>
-        <TextBox HorizontalAlignment="Left" Margin="615,193,0,0" TextWrapping="Wrap" Text="Number of customers" VerticalAlignment="Top" Width="140" />
-        <TextBox HorizontalAlignment="Left" Margin="615,250,0,0" TextWrapping="Wrap" Text="Customer Name" VerticalAlignment="Top" Width="120" />
-        <TextBox HorizontalAlignment="Left" Margin="615,306,0,0" TextWrapping="Wrap" Text="Contact Number" VerticalAlignment="Top" Width="120"/>
-        <Button Content="Customer Search" HorizontalAlignment="Left" Margin="675,365,0,0" VerticalAlignment="Top"/>
+        <Label Content="Booking Details" HorizontalAlignment="Left" Margin="35,44,0,0" VerticalAlignment="Top" Height="43" Width="163" FontSize="20" FontWeight="Bold"/>
+        <DatePicker x:Name="datePicker" SelectedDateChanged="DatePicker_SelectedDateChanged" HorizontalAlignment="Left" Margin="230,49,0,0" VerticalAlignment="Top"/>
+        <Button Content="Delete Booking" Click="DeleteBooking_Click" HorizontalAlignment="Left" Margin="355,380,0,0" VerticalAlignment="Top"/>
+        <Label Content="New Booking" HorizontalAlignment="Left" Margin="615,61,0,0" VerticalAlignment="Top" FontSize="20" FontWeight="Bold"/>
+        <DatePicker x:Name="newBookingDatePicker" HorizontalAlignment="Left" Margin="615,131,0,0" VerticalAlignment="Top" />
+        <ListBox x:Name="bookingsListBox" Margin="10,95,350,125" DisplayMemberPath="DisplayText" SelectedValuePath="BookingId"/>
+        <TextBlock x:Name="capacityTextBlock" HorizontalAlignment="Left" Margin="10,390,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="82" Text="Capacity 40"></TextBlock>
+        <TextBlock x:Name="bookingsTextBlock" HorizontalAlignment="Left" Margin="108,390,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="69"></TextBlock>
+        <TextBlock x:Name="availableTextBlock" HorizontalAlignment="Left" Margin="225,390,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="73"></TextBlock>
+        <TextBox x:Name="numberOfCustomersTextBox" HorizontalAlignment="Left" Margin="615,193,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="140" Text="Number of customers"/>
+        <TextBox x:Name="customerNameTextBox" HorizontalAlignment="Left" Margin="615,250,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Text="Customer Name"/>
+        <TextBox x:Name="contactNumberTextBox" HorizontalAlignment="Left" Margin="615,306,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Text="Contact Number"/>
+        <Button Content="Customer Search"  HorizontalAlignment="Left" Margin="675,365,0,0" VerticalAlignment="Top"/>
+
 
     </Grid>
 </Window>

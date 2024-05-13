@@ -28,21 +28,24 @@ namespace Finals
 
         private void UpdateBookingsList(DateTime selectedDate)
         {
-            using (var db = new RestaurantData("OODExam_AdamBokobza")) 
+            using (var db = new RestaurantData("OODExam_AdamBokobza"))
             {
                 var bookings = db.Bookings
                     .Where(b => DbFunctions.TruncateTime(b.BookingsDate) == DbFunctions.TruncateTime(selectedDate))
                     .Select(b => new
                     {
+                        BookingId = b.BookingId, // Ajoutez cette ligne pour récupérer l'ID
                         CustomerName = b.Customer.Name,
                         CustomerPhone = b.Customer.ContactNumber,
                         Participants = b.NumberOfParticipants
                     }).ToList();
 
-                bookingsListBox.ItemsSource = bookings.Select(b => $"{b.CustomerName} ({b.CustomerPhone}) – Party of {b.Participants}");
+                bookingsListBox.ItemsSource = bookings.Select(b => new {
+                    DisplayText = $"{b.CustomerName} ({b.CustomerPhone}) – Party of {b.Participants}",
+                    BookingId = b.BookingId
+                }).ToList();
 
                 int totalParticipants = bookings.Sum(b => b.Participants);
-                capacityTextBlock.Text = "Capacity: 40";
                 bookingsTextBlock.Text = $"Bookings: {totalParticipants}";
                 availableTextBlock.Text = $"Available: {40 - totalParticipants}";
             }
@@ -56,5 +59,38 @@ namespace Finals
                 UpdateBookingsList(datePicker.SelectedDate.Value);
             }
         }
+
+        private void DeleteBooking_Click(object sender, RoutedEventArgs e)
+        {
+            if (bookingsListBox.SelectedValue != null)
+            {
+                int bookingId = (int)bookingsListBox.SelectedValue;
+
+                using (var db = new RestaurantData("OODExam_AdamBokobza"))
+                {
+                    var bookingToDelete = db.Bookings.FirstOrDefault(b => b.BookingId == bookingId);
+                    if (bookingToDelete != null)
+                    {
+                        db.Bookings.Remove(bookingToDelete);
+                        db.SaveChanges();
+                        MessageBox.Show("Booking deleted successfully.");
+
+                        // Refresh the list after deletion
+                        if (datePicker.SelectedDate.HasValue)
+                        {
+                            UpdateBookingsList(datePicker.SelectedDate.Value);
+                        }
+                    }
+                }
+            }
+            else
+            {
+                MessageBox.Show("Please select a booking to delete.");
+            }
+        }
+
+
+
+
     }
 }

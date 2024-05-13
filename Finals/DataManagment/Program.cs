@@ -23,9 +23,11 @@ namespace DataManagment
 
                 Booking b1 = new Booking() { BookingsDate = new DateTime(2024, 5, 13), NumberOfParticipants = 2 };
                 Booking b2 = new Booking() { BookingsDate = new DateTime(2024, 4, 13), NumberOfParticipants = 1 };
+                Booking b3 = new Booking() { BookingsDate = new DateTime(2024, 5, 13), NumberOfParticipants = 1 };
 
                 c1.Bookings.Add(b1);
                 c2.Bookings.Add(b2);
+                c3.Bookings.Add(b3);
 
                 db.Customers.Add(c1);
                 db.Customers.Add(c2);
