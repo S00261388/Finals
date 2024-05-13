@@ -34,7 +34,7 @@ namespace Finals
                     .Where(b => DbFunctions.TruncateTime(b.BookingsDate) == DbFunctions.TruncateTime(selectedDate))
                     .Select(b => new
                     {
-                        BookingId = b.BookingId, // Ajoutez cette ligne pour récupérer l'ID
+                        BookingId = b.BookingId, 
                         CustomerName = b.Customer.Name,
                         CustomerPhone = b.Customer.ContactNumber,
                         Participants = b.NumberOfParticipants
@@ -75,7 +75,6 @@ namespace Finals
                         db.SaveChanges();
                         MessageBox.Show("Booking deleted successfully.");
 
-                        // Refresh the list after deletion
                         if (datePicker.SelectedDate.HasValue)
                         {
                             UpdateBookingsList(datePicker.SelectedDate.Value);
